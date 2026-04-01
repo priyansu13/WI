@@ -27,13 +27,13 @@
         <section class="hero">
           <div class="hero-panel">
             <p class="eyebrow">Together with their families</p>
-            <h1 class="hero-title">To Be Updated</h1>
-            <p class="date-line">Sunday, April 26, 2026 | Dhanbad, Jharkhand</p>
+            <h1 class="hero-title">A &amp; B</h1>
+            <p class="date-line">Wednesday, April 15, 2026 | Dhanbad, Jharkhand</p>
             <div class="hero-buttons">
               <a class="btn" href="rsvp.html">Accept Now</a>
               <a
                 class="btn btn-outline"
-                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Invitation&dates=20260426T133000Z/20260426T183000Z&details=Join%20us%20for%20the%20wedding%20celebration.&location=Dhanbad%2C%20Jharkhand%2C%20India"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Invitation&dates=20260415T133000Z/20260415T183000Z&details=Join%20us%20for%20the%20wedding%20celebration.&location=Dhanbad%2C%20Jharkhand%2C%20India"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -44,10 +44,25 @@
             </div>
           </div>
         </section>
+
+        <section class="section weather-section" aria-live="polite">
+          <h2>Dhanbad Weather</h2>
+          <div class="weather-content">
+            <div class="weather-main">
+              <span class="weather-temp" id="weather-temp">Loading...</span>
+              <span class="weather-desc" id="weather-desc">Fetching live conditions</span>
+            </div>
+            <div class="weather-meta">
+              <span id="weather-wind">Wind: --</span>
+              <span id="weather-time">Updated: --</span>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer" aria-hidden="true"></footer>
     </div>
 
+    <script src="weather.js" defer></script>
   </body>
 </html>
