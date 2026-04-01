@@ -135,7 +135,7 @@ const translations = {
     nearestAirport: "Nearest Airport: Darbhanga Airport (32.3 km)",
     mapTitle: "Wedding venue map",
     weatherTitle: "Live Weather & AQI",
-    weatherSubtitle: "Auto-updated for Madhubani",
+    weatherSubtitle: "Madhubani, Bihar",
     loadingWeather: "Loading weather details...",
     weatherUnavailable: "Live weather is currently unavailable.",
     humidity: "Humidity",
@@ -318,7 +318,7 @@ const translations = {
     nearestAirport: "निकटतम हवाई अड्डा: दरभंगा एयरपोर्ट (32.3 किमी)",
     mapTitle: "विवाह स्थान का मानचित्र",
     weatherTitle: "लाइव मौसम और AQI",
-    weatherSubtitle: "मधुबनी के लिए स्वतः अपडेट",
+    weatherSubtitle: "मधुबनी, बिहार",
     loadingWeather: "मौसम विवरण लोड हो रहा है...",
     weatherUnavailable: "लाइव मौसम अभी उपलब्ध नहीं है।",
     humidity: "आर्द्रता",
@@ -501,7 +501,7 @@ const translations = {
     nearestAirport: "नजदीकी एयरपोर्ट: दरभंगा एयरपोर्ट (32.3 किमी)",
     mapTitle: "बियाह स्थान मानचित्र",
     weatherTitle: "लाइव मौसम आ AQI",
-    weatherSubtitle: "मधुबनी लेल स्वतः अपडेट",
+    weatherSubtitle: "मधुबनी, बिहार",
     loadingWeather: "मौसम विवरण लोड भ' रहल अछि...",
     weatherUnavailable: "लाइव मौसम एखन उपलब्ध नहि अछि।",
     humidity: "आर्द्रता",
@@ -1515,16 +1515,8 @@ function App() {
         : t.weatherUnavailable;
 
       const aqiLine = weather.aqi ? `AQI: ${weather.aqi} (${aqiMeta.label})` : "AQI: N/A";
-      const forecastLine = weather.forecast.length
-        ? weather.forecast.map((d) => `${d.day}: ${d.temp}°C, ${d.condition}`).join(" | ")
-        : "Forecast: N/A";
 
-      return points([
-        t.weatherTitle,
-        current,
-        aqiLine,
-        forecastLine,
-      ]);
+      return points([t.weatherTitle, current, aqiLine]);
     }
 
     if (asksShagunMap) {
@@ -2217,11 +2209,7 @@ function App() {
           <p className="section-subtitle">
             {t.baraatDateTitle}: {t.baraatDateValue}
           </p>
-          <div className="grid-three">
-            <article className="glass-card">
-              <h3>{t.baraatDateTitle}</h3>
-              <p>{t.baraatDateValue}</p>
-            </article>
+          <div className="grid-two">
             <article className="glass-card">
               <h3>{t.departureTitle}</h3>
               <p>{t.departureValue}</p>
@@ -2269,50 +2257,17 @@ function App() {
           {weather.loading ? <p>{t.loadingWeather}</p> : null}
           {weather.error ? <p className="notice">{weather.error}</p> : null}
           {weather.now ? (
-            <div className="grid-three">
-              <article className="glass-card">
-                <h3>{weather.now.temp}°C</h3>
-                <p>{weather.now.condition}</p>
-              </article>
-              <article className="glass-card">
-                <h3>{weather.now.humidity}%</h3>
-                <p>{t.humidity}</p>
-              </article>
-              <article className="glass-card">
-                <h3>{weather.now.wind} km/h</h3>
-                <p>{t.windSpeed}</p>
-              </article>
-            </div>
-          ) : null}
-
-          {weather.aqi ? (
-            <div className="aqi-box">
-              <div>
-                <strong>AQI {weather.aqi}</strong>
-                <span>{aqiMeta.label}</span>
-              </div>
-              <div className="aqi-track">
-                <div
-                  className="aqi-progress"
-                  style={{
-                    width: `${Math.min(weather.aqi / 3, 100)}%`,
-                    backgroundColor: aqiMeta.color,
-                  }}
-                />
-              </div>
-            </div>
-          ) : null}
-
-          {weather.forecast.length ? (
-            <div className="grid-three forecast">
-              {weather.forecast.map((day) => (
-                <article className="glass-card" key={day.day}>
-                  <h3>{day.day}</h3>
-                  <p>{day.temp}°C</p>
-                  <p>{day.condition}</p>
-                </article>
-              ))}
-            </div>
+            <article className="glass-card weather-card">
+              <h3>{weather.now.temp}°C</h3>
+              <p>{weather.now.condition}</p>
+              <p>
+                {t.humidity}: {weather.now.humidity}%
+              </p>
+              <p>
+                {t.windSpeed}: {weather.now.wind} km/h
+              </p>
+              <p>{weather.aqi ? `AQI ${weather.aqi} (${aqiMeta.label})` : "AQI: N/A"}</p>
+            </article>
           ) : null}
         </section>
 

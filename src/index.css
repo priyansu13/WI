@@ -1036,6 +1036,14 @@ body[data-theme="dark"] .glass-card {
   padding: 0.95rem;
 }
 
+.weather-card {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  gap: 0.35rem;
+}
+
 .aqi-box div:first-child {
   display: flex;
   justify-content: space-between;
