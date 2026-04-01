@@ -2089,58 +2089,32 @@ function App() {
       <header className="topbar">
         <p className="brand">{t.brand}</p>
         <div className="actions">
-          <div className={`quick-nav-wrap ${quickNavOpen ? "open" : ""}`}>
-            <button
-              type="button"
-              className="quick-nav-toggle"
-              onClick={() => setQuickNavOpen((v) => !v)}
-              aria-label={t.quickNav}
-              title={t.quickNav}
+          <label className="chip language-chip" htmlFor="language-select">
+            <span className="language-label">{t.language}</span>
+            <select
+              className="language-select"
+              id="language-select"
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
             >
-              <span className="hamburger-icon" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </span>
-            </button>
-            {quickNavOpen ? (
-              <nav className="quick-nav-panel" aria-label="Quick section links">
-                <div className="quick-nav-controls">
-                  <label className="chip language-chip" htmlFor="language-select">
-                    <span className="language-label">{t.language}</span>
-                    <select
-                      className="language-select"
-                      id="language-select"
-                      value={language}
-                      onChange={(e) => setLanguage(e.target.value)}
-                    >
-                      <option value="hi">{t.languageHindi}</option>
-                      <option value="mai">{t.languageMaithili}</option>
-                      <option value="en">{t.languageEnglish}</option>
-                    </select>
-                  </label>
-                  <button
-                    onClick={() => setDarkMode((v) => !v)}
-                    className={`topbar-plain-btn chip-theme-text ${darkMode ? "is-dark" : ""}`}
-                    type="button"
-                  >
-                    <img
-                      src={darkMode ? moonIconSrc : sunIconSrc}
-                      alt=""
-                      aria-hidden="true"
-                      className={`topbar-chip-icon ${darkMode ? "moon-mode-icon" : "sun-mode-icon"}`}
-                    />
-                    <span>{darkMode ? t.lightMode : t.darkMode}</span>
-                  </button>
-                </div>
-                {quickSections.map((item) => (
-                  <button key={item.id} type="button" onClick={() => jumpToSection(item.id)}>
-                    {item.label}
-                  </button>
-                ))}
-              </nav>
-            ) : null}
-          </div>
+              <option value="hi">{t.languageHindi}</option>
+              <option value="mai">{t.languageMaithili}</option>
+              <option value="en">{t.languageEnglish}</option>
+            </select>
+          </label>
+          <button
+            onClick={() => setDarkMode((v) => !v)}
+            className={`topbar-plain-btn chip-theme-text ${darkMode ? "is-dark" : ""}`}
+            type="button"
+          >
+            <img
+              src={darkMode ? moonIconSrc : sunIconSrc}
+              alt=""
+              aria-hidden="true"
+              className={`topbar-chip-icon ${darkMode ? "moon-mode-icon" : "sun-mode-icon"}`}
+            />
+            <span>{darkMode ? t.lightMode : t.darkMode}</span>
+          </button>
         </div>
       </header>
 
