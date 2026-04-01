@@ -2174,7 +2174,11 @@ function App() {
                 aria-label={t.quickNav}
                 title={t.quickNav}
               >
-                {quickNavOpen ? t.close : t.moreInfo}
+                <span className="hamburger-icon" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </span>
               </button>
               {quickNavOpen ? (
                 <nav className="quick-nav-panel" aria-label="Quick section links">
