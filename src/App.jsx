@@ -2116,15 +2116,7 @@ function App() {
             />
             <span>{darkMode ? t.lightMode : t.darkMode}</span>
             </button>
-            <button
-              onClick={handleToggleAudio}
-              className="topbar-plain-btn chip-audio-text"
-              disabled={!activeAudioSrc}
-              title={activeAudioSrc ? t.musicToggleTitle : t.musicMissingTitle}
-            >
-            <img src={musicIconSrc} alt="" aria-hidden="true" className={`topbar-chip-icon music-mode-icon ${audioOn ? "is-on" : "is-off"}`} />
-            {audioOn ? t.muteMusic : t.playMusic}
-          </button>
+          
         </div>
       </header>
 
@@ -2158,6 +2150,21 @@ function App() {
             <a className="btn btn-outline" href={buildCalendarUrl(t)} target="_blank" rel="noreferrer">
               {t.addToCalendar}
             </a>
+            <button
+              type="button"
+              onClick={handleToggleAudio}
+              className="btn btn-outline"
+              disabled={!activeAudioSrc}
+              title={activeAudioSrc ? t.musicToggleTitle : t.musicMissingTitle}
+            >
+              <img
+                src={musicIconSrc}
+                alt=""
+                aria-hidden="true"
+                className={`topbar-chip-icon music-mode-icon ${audioOn ? "is-on" : "is-off"}`}
+              />
+              {audioOn ? t.muteMusic : t.playMusic}
+            </button>
           </div>
             <div className={`quick-nav-wrap ${quickNavOpen ? "open" : ""}`}>
               <button
