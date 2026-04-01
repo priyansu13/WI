@@ -2089,6 +2089,30 @@ function App() {
       <header className="topbar">
         <p className="brand">{t.brand}</p>
         <div className="actions">
+          <div className={`quick-nav-wrap ${quickNavOpen ? "open" : ""}`}>
+            <button
+              type="button"
+              className="quick-nav-toggle"
+              onClick={() => setQuickNavOpen((v) => !v)}
+              aria-label={t.quickNav}
+              title={t.quickNav}
+            >
+              <span className="hamburger-icon" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+            </button>
+            {quickNavOpen ? (
+              <nav className="quick-nav-panel" aria-label="Quick section links">
+                {quickSections.map((item) => (
+                  <button key={item.id} type="button" onClick={() => jumpToSection(item.id)}>
+                    {item.label}
+                  </button>
+                ))}
+              </nav>
+            ) : null}
+          </div>
           {showHomeShortcut ? (
             <button type="button" className="chip chip-home" onClick={() => jumpToSection("hero")}>
               {t.navHome}
@@ -2166,30 +2190,6 @@ function App() {
               {audioOn ? t.muteMusic : t.playMusic}
             </button>
           </div>
-            <div className={`quick-nav-wrap ${quickNavOpen ? "open" : ""}`}>
-              <button
-                type="button"
-                className="quick-nav-toggle"
-                onClick={() => setQuickNavOpen((v) => !v)}
-                aria-label={t.quickNav}
-                title={t.quickNav}
-              >
-                <span className="hamburger-icon" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                </span>
-              </button>
-              {quickNavOpen ? (
-                <nav className="quick-nav-panel" aria-label="Quick section links">
-                  {quickSections.map((item) => (
-                    <button key={item.id} type="button" onClick={() => jumpToSection(item.id)}>
-                      {item.label}
-                    </button>
-                  ))}
-                </nav>
-              ) : null}
-            </div>
           </div>
           <div className="scroll-indicator" aria-hidden="true" />
         </section>
