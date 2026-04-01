@@ -195,9 +195,9 @@ body[data-theme="dark"] .actions {
   display: inline-flex;
   align-items: center;
   gap: 0.38rem;
-  padding: 0.36rem 1.02rem 0.36rem 0.72rem;
-  min-width: 118px;
-  height: 40px;
+  padding: 0.24rem 0.68rem 0.24rem 0.54rem;
+  min-width: 96px;
+  height: 32px;
   box-sizing: border-box;
   position: relative;
   border-radius: 999px;
@@ -225,7 +225,7 @@ body[data-theme="dark"] .actions {
 }
 
 .language-label {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -249,12 +249,12 @@ body[data-theme="dark"] .actions {
   background: rgba(255, 247, 230, 0.14);
   color: #fffaf0;
   font: inherit;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  padding: 0.2rem 1.1rem 0.2rem 0.42rem;
-  min-width: 94px;
+  padding: 0.14rem 0.95rem 0.14rem 0.36rem;
+  min-width: 78px;
   width: auto;
   outline: none;
   cursor: pointer;
@@ -269,10 +269,10 @@ body[data-theme="dark"] .actions {
 
 body[data-lang="hi"] .language-select,
 body[data-lang="mai"] .language-select {
-  font-size: 0.8rem;
-  line-height: 1.45;
-  padding-top: 0.26rem;
-  padding-bottom: 0.14rem;
+  font-size: 0.74rem;
+  line-height: 1.35;
+  padding-top: 0.18rem;
+  padding-bottom: 0.1rem;
 }
 
 body:not([data-theme="dark"]) .language-select {
