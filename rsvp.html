@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation</title>
+    <meta
+      name="description"
+      content="Confirm your attendance for the wedding celebration."
+    />
+    <meta name="theme-color" content="#800020" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <p class="brand">Our Wedding Journal</p>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="page-actions">
+            <a class="btn btn-outline" href="index.html">Back to Home</a>
+          </div>
+          <h2>Confirmation</h2>
+          <form class="form" data-rsvp>
+            <label>
+              Full Name
+              <input name="name" required />
+            </label>
+            <label>
+              Travelling from
+              <input name="from" required />
+            </label>
+            <label>
+              Guests
+              <select name="guests">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </label>
+            <label>
+              Ceremony
+              <select name="ceremony">
+                <option value="shagun">Shagun Ceremony</option>
+                <option value="wedding" selected>Wedding Night</option>
+                <option value="both">Both Ceremonies</option>
+              </select>
+            </label>
+            <button class="btn" type="submit">Confirm Now</button>
+            <p class="notice" data-rsvp-note hidden>Thank you. Your confirmation is received.</p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer" aria-hidden="true"></footer>
+    </div>
+
+    <script src="rsvp.js" defer></script>
+  </body>
+</html>
