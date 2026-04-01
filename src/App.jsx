@@ -2089,32 +2089,6 @@ function App() {
       <header className="topbar">
         <p className="brand">{t.brand}</p>
         <div className="actions">
-          <label className="chip language-chip" htmlFor="language-select">
-            <span className="language-label">{t.language}</span>
-            <select
-              className="language-select"
-              id="language-select"
-              value={language}
-              onChange={(e) => setLanguage(e.target.value)}
-            >
-              <option value="hi">{t.languageHindi}</option>
-              <option value="mai">{t.languageMaithili}</option>
-              <option value="en">{t.languageEnglish}</option>
-            </select>
-          </label>
-          <button
-            onClick={() => setDarkMode((v) => !v)}
-            className={`topbar-plain-btn chip-theme-text ${darkMode ? "is-dark" : ""}`}
-            type="button"
-          >
-            <img
-              src={darkMode ? moonIconSrc : sunIconSrc}
-              alt=""
-              aria-hidden="true"
-              className={`topbar-chip-icon ${darkMode ? "moon-mode-icon" : "sun-mode-icon"}`}
-            />
-            <span>{darkMode ? t.lightMode : t.darkMode}</span>
-          </button>
         </div>
       </header>
 
@@ -2145,9 +2119,35 @@ function App() {
             <a className="btn" href="#rsvp" onClick={launchFlowerDrop}>
               {t.acceptNow}
             </a>
+            <label className="chip language-chip" htmlFor="language-select">
+              <span className="language-label">{t.language}</span>
+              <select
+                className="language-select"
+                id="language-select"
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+              >
+                <option value="hi">{t.languageHindi}</option>
+                <option value="mai">{t.languageMaithili}</option>
+                <option value="en">{t.languageEnglish}</option>
+              </select>
+            </label>
             <a className="btn btn-outline" href={buildCalendarUrl(t)} target="_blank" rel="noreferrer">
               {t.addToCalendar}
             </a>
+            <button
+              onClick={() => setDarkMode((v) => !v)}
+              className={`btn btn-outline chip-theme-text ${darkMode ? "is-dark" : ""}`}
+              type="button"
+            >
+              <img
+                src={darkMode ? moonIconSrc : sunIconSrc}
+                alt=""
+                aria-hidden="true"
+                className={`topbar-chip-icon ${darkMode ? "moon-mode-icon" : "sun-mode-icon"}`}
+              />
+              <span>{darkMode ? t.lightMode : t.darkMode}</span>
+            </button>
             <button
               type="button"
               onClick={handleToggleAudio}
