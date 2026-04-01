@@ -2257,17 +2257,24 @@ function App() {
           {weather.loading ? <p>{t.loadingWeather}</p> : null}
           {weather.error ? <p className="notice">{weather.error}</p> : null}
           {weather.now ? (
-            <article className="glass-card weather-card">
-              <h3>{weather.now.temp}°C</h3>
-              <p>{weather.now.condition}</p>
-              <p>
-                {t.humidity}: {weather.now.humidity}%
-              </p>
-              <p>
-                {t.windSpeed}: {weather.now.wind} km/h
-              </p>
-              <p>{weather.aqi ? `AQI ${weather.aqi} (${aqiMeta.label})` : "AQI: N/A"}</p>
-            </article>
+            <div className="weather-circles">
+              <div className="weather-circle">
+                <strong>{weather.now.temp}°C</strong>
+                <span>Temp</span>
+              </div>
+              <div className="weather-circle">
+                <strong>{weather.now.humidity}%</strong>
+                <span>{t.humidity}</span>
+              </div>
+              <div className="weather-circle">
+                <strong>{weather.now.wind} km/h</strong>
+                <span>{t.windSpeed}</span>
+              </div>
+              <div className="weather-circle">
+                <strong>{weather.aqi ?? "N/A"}</strong>
+                <span>AQI</span>
+              </div>
+            </div>
           ) : null}
         </section>
 
