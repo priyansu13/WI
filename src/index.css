@@ -1575,6 +1575,23 @@ body[data-theme="dark"] .quick-nav-toggle {
   text-align: left;
 }
 
+.quick-nav-controls {
+  display: grid;
+  gap: 0.5rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px dashed color-mix(in oklab, var(--gold), transparent 55%);
+}
+
+.quick-nav-panel .language-chip {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.quick-nav-panel .topbar-plain-btn {
+  width: 100%;
+  justify-content: center;
+}
+
 .quick-nav-panel button {
   border: 1px solid color-mix(in oklab, var(--gold), transparent 45%);
   border-radius: 10px;
