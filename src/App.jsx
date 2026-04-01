@@ -2086,10 +2086,8 @@ function App() {
         <div className="crest">SS</div>
       </div>
 
-      <header className="topbar">
+      <header className="topbar topbar-title-only">
         <p className="brand">{t.brand}</p>
-        <div className="actions">
-        </div>
       </header>
 
       <main>

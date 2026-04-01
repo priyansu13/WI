@@ -156,6 +156,10 @@ textarea,
   --topbar-control-color: #651025;
 }
 
+.topbar-title-only {
+  justify-content: center;
+}
+
 body[data-theme="dark"] .topbar {
   background:
     linear-gradient(135deg, rgba(39, 16, 20, 0.86), rgba(57, 22, 30, 0.82));
