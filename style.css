@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Parisienne&family=Quicksand:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Upright:wght@500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap");
 
 :root {
   --paper: #fff9f1;
@@ -24,7 +24,7 @@ body {
 }
 
 body {
-  font-family: "Quicksand", "Trebuchet MS", Arial, sans-serif;
+  font-family: "Josefin Sans", "Trebuchet MS", Arial, sans-serif;
   color: var(--ink);
   background:
     radial-gradient(circle, rgba(138, 31, 45, 0.22) 1.6px, transparent 1.8px),
@@ -92,22 +92,24 @@ a {
 
 .gallery-hero h1 {
   margin: 0;
-  font-family: "Parisienne", "Brush Script MT", cursive;
-  font-size: clamp(3.1rem, 11vw, 7rem);
+  font-family: "Allura", "Brush Script MT", cursive;
+  font-size: clamp(4rem, 15vw, 9rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 0.9;
   overflow-wrap: anywhere;
+  letter-spacing: 0.02em;
   text-shadow: 0 12px 26px rgba(0, 0, 0, 0.36);
 }
 
 .hero-copy {
   max-width: 520px;
-  margin: 1rem auto 1.5rem;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(0.98rem, 2.6vw, 1.16rem);
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
+  margin: 1.15rem auto 1.5rem;
+  font-family: "Cormorant Upright", Georgia, serif;
+  font-size: clamp(1.35rem, 3.6vw, 1.85rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
 }
@@ -120,10 +122,10 @@ a {
   max-width: 100%;
   border-radius: 8px;
   padding: 0.85rem 1.35rem;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 0.92rem;
+  font-family: "Josefin Sans", "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.16em;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -164,10 +166,11 @@ a {
 
 .card h3 {
   margin: 0 0 0.85rem;
-  font-family: "Parisienne", "Brush Script MT", cursive;
-  font-size: clamp(1.9rem, 7vw, 2.7rem);
+  font-family: "Allura", "Brush Script MT", cursive;
+  font-size: clamp(2.65rem, 9vw, 3.7rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
   color: var(--maroon);
 }
 
@@ -241,12 +244,12 @@ a {
   }
 
   .gallery-hero h1 {
-    font-size: clamp(2.35rem, 16vw, 3.65rem);
+    font-size: clamp(3.25rem, 20vw, 4.8rem);
   }
 
   .hero-copy {
     margin-top: 0.75rem;
-    font-size: 0.95rem;
+    font-size: 1.22rem;
   }
 
   .card {
