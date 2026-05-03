@@ -3,66 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Wedding Journal</title>
+    <title>Wedding Gallery</title>
     <meta
       name="description"
-      content="A simple wedding invitation with venue, gallery, RSVP, and countdown details."
+      content="Wedding gallery for the completed celebration."
     />
     <meta name="theme-color" content="#800020" />
-    <meta property="og:title" content="Our Wedding Journal" />
+    <meta property="og:title" content="Wedding Gallery" />
     <meta
       property="og:description"
-      content="Join us for the wedding celebration of Saurabh and Soni."
+      content="Photo memories from the shagun ceremony and wedding ceremony."
     />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app">
-      <header class="topbar">
-        <p class="brand">Our Wedding Journal</p>
-      </header>
+    <main class="gallery-page">
+      <section class="gallery-hero">
+        <p class="brand">Wedding Gallery</p>
+        <h1>Wedding Gallery</h1>
+      </section>
 
-      <main>
-        <section class="hero">
-          <div class="hero-panel">
-            <p class="eyebrow">Together with their families</p>
-            <h1 class="hero-title">A &amp; B</h1>
-            <p class="date-line">Wednesday, April 15, 2026 | Dhanbad, Jharkhand</p>
-            <div class="hero-buttons">
-              <a class="btn" href="rsvp.html">Accept Now</a>
-              <a
-                class="btn btn-outline"
-                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Invitation&dates=20260415T133000Z/20260415T183000Z&details=Join%20us%20for%20the%20wedding%20celebration.&location=Dhanbad%2C%20Jharkhand%2C%20India"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Add to Calendar
-              </a>
-              <a class="btn btn-outline" href="venue.html">Venue</a>
-              <a class="btn btn-outline" href="gallery.html">Gallery</a>
-            </div>
-          </div>
-        </section>
+      <section class="section">
+        <div class="card-grid">
+          <article class="card">
+            <h2>Shagun Ceremony</h2>
+            <a
+              class="link"
+              href="https://drive.google.com/drive/folders/19TjjIsKZkT5rnssreugnOnBPnM8pQJhI"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Album
+            </a>
+          </article>
 
-        <section class="section weather-section" aria-live="polite">
-          <h2>Dhanbad Weather</h2>
-          <div class="weather-content">
-            <div class="weather-main">
-              <span class="weather-temp" id="weather-temp">Loading...</span>
-              <span class="weather-desc" id="weather-desc">Fetching live conditions</span>
-            </div>
-            <div class="weather-meta">
-              <span id="weather-wind">Wind: --</span>
-              <span id="weather-time">Updated: --</span>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer" aria-hidden="true"></footer>
-    </div>
-
-    <script src="weather.js" defer></script>
+          <article class="card">
+            <h2>Wedding Ceremony</h2>
+            <a
+              class="link"
+              href="https://drive.google.com/drive/folders/19TjjIsKZkT5rnssreugnOnBPnM8pQJhI"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Album
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
