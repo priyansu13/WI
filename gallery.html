@@ -14,6 +14,10 @@
   <body>
     <main class="gallery-page">
       <section class="gallery-hero">
+        <div class="visitor-count" aria-label="Visitor count">
+          <span class="visitor-count__number" data-visitor-count>108</span>
+          <span class="visitor-count__label">Visits</span>
+        </div>
         <div class="hero-content">
           <h1>Wedding Gallery</h1>
         </div>
@@ -47,5 +51,25 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const counter = document.querySelector("[data-visitor-count]");
+        if (!counter) return;
+
+        const storageKey = "wedding-gallery-visitor-count";
+        const initialCount = Number(counter.textContent) || 108;
+
+        try {
+          const storedCount =
+            Number(localStorage.getItem(storageKey)) || initialCount;
+          const nextCount = Math.max(initialCount, storedCount) + 1;
+
+          localStorage.setItem(storageKey, String(nextCount));
+          counter.textContent = nextCount.toLocaleString("en-IN");
+        } catch {
+          counter.textContent = initialCount.toLocaleString("en-IN");
+        }
+      })();
+    </script>
   </body>
 </html>
